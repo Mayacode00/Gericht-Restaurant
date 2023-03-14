@@ -28,6 +28,7 @@
   flex-direction: row;
   width: max-content;
   overflow-x: scroll;
+  overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
