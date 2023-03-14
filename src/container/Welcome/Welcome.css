@@ -1,0 +1,23 @@
+.app__welcome {
+  height: 100vh;
+  position: relative;
+}
+.app__welcome-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.735);
+}
+.app__welcome-overlay-text {
+  border-right: 1px groove var(--color-golden);
+  height: 100px;
+  padding: 20px;
+  text-align: center;
+}
+.app__welcome-overlay-text h1 {
+  font-size: 90px;
+}
+@media screen and (max-width: 650px) {
+  .app__welcome-overlay-text h1 {
+    font-size: 60px;
+  }
+}

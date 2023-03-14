@@ -1,0 +1,52 @@
+.app__testimony {
+  background: var(--color-black);
+  flex-direction: column;
+  text-align: center;
+}
+.app__testimony-card_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.app__testimony-card {
+  width: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app__testimony-card-img {
+  height: 250px;
+}
+.app__testimony-card-img #img {
+  height: 260px;
+  object-fit: contain;
+  width: 260px;
+}
+.app__testimony-card-img-quote {
+  height: 30px;
+  transform: translate(100px, -80px);
+  width: 30px;
+}
+.app__testimony-card-review {
+  margin-left: 1rem;
+  text-align: left;
+}
+.app__testimony-card-note_customer-details {
+  margin-top: 1rem;
+}
+@media screen and (max-width: 650px) {
+  .app__testimony-card {
+    flex-direction: column;
+    width: 340px;
+  }
+
+  .app__testimony-card-review {
+    width: 200px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .app__testimony-card-img-quote {
+    transform: translate(-240px, 10px);
+  }
+}

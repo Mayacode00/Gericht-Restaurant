@@ -7,6 +7,9 @@
   padding: 1rem 2rem;
   color: var(--color-white);
   font-family: var(--font-alt);
+  box-shadow: 1px 14px 25px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 14px 25px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 14px 25px 5px rgba(0, 0, 0, 0.75);
 }
 .app__navbar-logo {
   display: flex;

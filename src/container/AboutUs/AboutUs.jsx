@@ -1,6 +1,9 @@
 import React from "react";
 import "./AboutUs.css";
 import images from "../../constants/images";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholder from "../../constants/placeholder";
 
 function AboutUs() {
   return (
@@ -26,7 +29,13 @@ function AboutUs() {
         </div>
 
         <div className="app__aboutus-content_knife flex__center">
-          <img src={images.knife} alt="about_knife" />
+          <LazyLoadImage
+            className="lazy-load"
+            placeholder={placeholder.knife}
+            effect="blur"
+            src={images.knife}
+            alt="about_knife"
+          />
         </div>
 
         <div className="app__aboutus-content_history">

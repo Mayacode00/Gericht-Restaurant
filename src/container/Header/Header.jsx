@@ -1,6 +1,9 @@
 import React from "react";
 import images from "../../constants/images";
 import SubHeading from "../../components/SubHeading/SubHeading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholder from "../../constants/placeholder";
 import "./Header.css";
 
 function Header() {
@@ -17,10 +20,13 @@ function Header() {
         <button className="custom__button">explore menu</button>
       </div>
       <div className="app__wrapper_img">
-        <img
+        <LazyLoadImage
+          className="lazy-load"
+          placeholder={placeholder.chickenSoup}
           src={images.welcome}
           alt="header img"
-          style={{ height: "500px" }}
+          style={{ height: "500px", objectFit: "contain" }}
+          effect="blur"
         />
       </div>
     </div>

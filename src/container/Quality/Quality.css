@@ -1,0 +1,14 @@
+.app__quality-service {
+  background: var(--color-black);
+  text-align: center;
+}
+.app__quality-service_button button:first-child {
+  margin-right: 1rem;
+}
+.app__quality-service_button button:hover {
+  background: none;
+  border: 1px solid var(--color-golden);
+  cursor: pointer;
+  transition: 0.6s ease;
+  color: var(--color-white);
+}

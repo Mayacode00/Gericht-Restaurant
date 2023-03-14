@@ -1,0 +1,80 @@
+.app__all-chefs {
+  background: var(--color-black);
+  padding: 7rem 11rem 4rem 11rem;
+}
+.app__all-chefs_profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.app__all-chefs_profiles-tile {
+  margin-bottom: 4rem;
+}
+.app__all_chefs_profiles-tile-name-img {
+  border: 1px solid var(--color-golden);
+  position: relative;
+  height: 382px;
+  min-width: 320px;
+}
+.app__all_chefs_profiles-tile-name .lazy-load {
+  height: 380px;
+  width: 320px;
+  object-fit: cover;
+}
+.app__all_chefs-images_card {
+  position: absolute;
+  bottom: 70px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.6s ease;
+  text-align: center;
+}
+.all_chefs__image-icon {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.all_chefs__image-icons:hover {
+  color: var(--color-golden);
+}
+.app__chefs_link {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.app__chefs_link div {
+  border: 1px solid var(--color-golden);
+  width: 2rem;
+  height: 0.5px;
+}
+.app__all_chefs_profiles-tile-name-img:hover #img{
+  opacity: 0.35;
+}
+.app__all_chefs_profiles-tile-name-img:hover .app__all_chefs-images_card {
+  opacity: 1;
+}
+@media screen and (max-width: 1150px) {
+  .app__all-chefs {
+    padding: 7rem 3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .app__all-chefs {
+    padding: 7rem 6.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .app__all-chefs {
+    padding: 7rem 3.5rem;
+  }
+  .app__all_chefs_profiles-tile-name-img {
+    height: 300px;
+    min-width: 260px;
+  }
+  .app__all_chefs_profiles-tile-name .lazy-load {
+    height: 300px;
+    width: 260px;
+  }
+}

@@ -6,6 +6,8 @@ import {
   BsArrowRightShort,
 } from "react-icons/bs";
 import images from "../../constants/images";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import SubHeading from "../../components/SubHeading/SubHeading";
 
 const galleryImages = [
@@ -50,7 +52,13 @@ const Gallery = () => {
               className="app__gallery-images_card flex__center"
               key={`gallery_image-${index + 1}`}
             >
-              <img src={image} alt="gallery" />
+              <LazyLoadImage
+                className="lazy-load"
+                id="img"
+                effect="blur"
+                src={image}
+                alt="gallery"
+              />
               <BsInstagram className="gallery__image-icon" />
             </div>
           ))}

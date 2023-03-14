@@ -1,0 +1,26 @@
+.app__menu-options {
+  background: url("../../assets/juice-two.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 70vh;
+  position: relative;
+}
+.app__menu-options-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.697);
+  align-content: left;
+  display: flex;
+  align-items: center;
+}
+.app__menu-options-overlay-text h1 {
+  line-height: 90px;
+  font-size: 50px;
+}
+.app__menu-options-overlay-text h1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: .6s all ease-in;
+}

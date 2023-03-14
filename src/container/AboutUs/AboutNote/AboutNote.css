@@ -1,0 +1,16 @@
+.app__about-note {
+  background: var(--color-black);
+  text-align: center;
+  padding: 0 16rem;
+}
+@media screen and (max-width: 1150px) {
+  .app__about-note {
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .app__about-note {
+    padding: 0 2rem;
+    height: 100vh;
+  }
+}

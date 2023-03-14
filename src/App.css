@@ -15,7 +15,20 @@
   background-repeat: repeat;
   background-attachment: fixed;
 }
-
+.welcome__bg {
+  background: url("./assets/bg-contact.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.happy-hour__bg {
+  background: url("./assets/happhours.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
 .app__wrapper {
   display: flex;
   justify-content: space-between;
@@ -47,9 +60,12 @@
   justify-content: flex-start;
   margin-right: 2rem;
 }
+.app__wrapper_img .lazy-load {
+  width: 90%;
+}
 
 .app__wrapper_img img {
-  width: 80%;
+  width: 90%;
 }
 
 .custom__button {
@@ -78,6 +94,18 @@
   line-height: 29.9px;
   font-size: 23px;
 }
+@font-face {
+  font-family: besterMind;
+  src: url(././assets/BestermindRegular.ttf);
+}
+.p__bestermind {
+  font-family: besterMind;
+  font-size: 64px;
+  font-style: normal;
+  color: var(--color-golden);
+  text-transform: capitalize;
+  line-height: 163px;
+}
 
 .p__opensans {
   font-family: var(--font-alt);
@@ -96,7 +124,7 @@
   line-height: 28px;
   font-size: 16px;
 }
-.p__opensans-footer::first-letter{
+.p__opensans-footer::first-letter {
   text-transform: uppercase;
 }
 .headtext__cormorant {
@@ -135,16 +163,15 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .app__wrapper {
-    flex-direction: column;
-  }
-
   .app__wrapper_img {
     margin: 5rem 0 0 0;
   }
 
   .app__wrapper_img-reverse {
     margin: 0 0 5rem 0;
+  }
+  .app__wrapper_img .lazy-load {
+    width: 100%;
   }
 
   .app__wrapper_img img {
@@ -153,6 +180,9 @@
 }
 
 @media screen and (max-width: 850px) {
+  .app__wrapper {
+    flex-direction: column;
+  }
   .section__padding {
     padding: 4rem;
   }

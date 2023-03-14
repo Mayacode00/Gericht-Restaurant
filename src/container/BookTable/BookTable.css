@@ -1,0 +1,44 @@
+.app__book-table {
+  background: var(--color-black);
+  text-align: center;
+}
+.app__book-table_card {
+  background: var(--color-black);
+  box-shadow: 10px 10px 27px 1px rgba(0, 0, 0, 0.86);
+  -webkit-box-shadow: 10px 10px 27px 1px rgba(0, 0, 0, 0.86);
+  -moz-box-shadow: 10px 10px 27px 1px rgba(0, 0, 0, 0.86);
+  padding: 2rem 0;
+}
+.app__book-table_input-selections {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 0;
+  width: 1000px;
+}
+.app__book-table_input-selections select {
+  width: 320px;
+  height: 50px;
+  border: 1px solid var(--color-golden);
+  background: none;
+  color: var(--color-grey);
+}
+.app__book-table_input-selections select > option {
+  background: var(--color-black);
+  cursor: pointer;
+  padding: 1rem;
+}
+@media screen and (max-width: 1150px) {
+  .app__book-table_input-selections {
+    width: 700px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .app__book-table_input-selections select {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .app__book-table_input-selections {
+    width: 350px;
+  }
+}

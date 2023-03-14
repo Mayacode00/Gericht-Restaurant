@@ -1,6 +1,9 @@
 import React from "react";
 import images from "../../constants/images";
 import SubHeading from "../../components/SubHeading/SubHeading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholder from "../../constants/placeholder";
 
 function FindUs() {
   return (
@@ -23,14 +26,20 @@ function FindUs() {
           <p className="p__opensans">Mon - Fri: 10:00 am - 02:00 am</p>
           <p className="p__opensans">Sat - Sun: 10:00 am - 03:00 am</p>
         </div>
-        
+
         <button className="custom__button" style={{ marginTop: "2rem" }}>
           visit us
         </button>
       </div>
 
       <div className="app__wrapper_img">
-        <img src={images.findus} alt="find us" />
+        <LazyLoadImage
+          effect="blur"
+          className="lazy-load"
+          placeholder={placeholder.lemonWater}
+          src={images.findus}
+          alt="find us"
+        />
       </div>
     </div>
   );

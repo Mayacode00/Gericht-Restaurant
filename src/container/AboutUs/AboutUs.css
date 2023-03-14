@@ -25,7 +25,7 @@
 .app__aboutus-content_knife {
   margin: 2rem 4rem;
 }
-.app__aboutus-content_knife img {
+.app__aboutus-content_knife .lazy-load {
   height: 910px;
 }
 .app__aboutus-content_history {
@@ -42,7 +42,7 @@
   color: var(--color-grey);
 }
 @media screen and (min-width: 2000px) {
-  .app__aboutus-content_knife img {
+  .app__aboutus-content_knife .lazy-load {
     height: 110px;
   }
   .app__aboutus-content_history p,
@@ -57,10 +57,16 @@
   .app__aboutus-content_knife {
     margin: 4rem 0;
   }
+  .app__aboutus-content_knife .lazy-load {
+    height: 800px;
+  }
 }
 @media screen and (max-width: 650px) {
   .app__aboutus-overlay img {
     width: 80%;
     height: 320px;
+  }
+  .app__aboutus-content_knife .lazy-load {
+    height: 700px;
   }
 }

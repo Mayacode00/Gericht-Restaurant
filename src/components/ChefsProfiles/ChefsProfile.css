@@ -1,0 +1,46 @@
+.app__chefs-profile {
+  background: var(--color-black);
+  display: flex;
+  justify-content: space-between;
+}
+.p__cormorant {
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 30px;
+}
+.app__chefs-profile_img .lazy-load {
+  height: 600px;
+  width: 500px;
+  object-fit: cover;
+}
+.app__chefs-profile_words {
+  margin-left: 2rem;
+}
+.app__chefs-profile_words-achievement {
+  margin: 3rem 0;
+}
+.app__chefs-profile_words-achievement-school {
+  margin-top: 3rem;
+}
+.app__chefs-profile_words-achievement-school p {
+  line-height: 2.5rem;
+  font-weight: 100;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px groove var(--color-golden);
+}
+@media screen and (max-width: 1150px) {
+  .app__chefs-profile {
+    flex-direction: column;
+  }
+  .app__chefs-profile_words {
+    margin: 2rem 0 0 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .app__chefs-profile_img .lazy-load {
+    width: 300px;
+    height: 500px;
+  }
+}

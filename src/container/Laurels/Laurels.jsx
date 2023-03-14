@@ -2,6 +2,9 @@ import React from "react";
 import "./Laurels.css";
 import images from "../../constants/images";
 import data from "../../constants/data";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholder from "../../constants/placeholder";
 import SubHeading from "../../components/SubHeading/SubHeading";
 
 const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
@@ -29,7 +32,13 @@ const Laurels = () => (
       </div>
     </div>
     <div className="app__wrapper_img">
-      <img src={images.laurels} alt="laurels" />
+      <LazyLoadImage
+        className="lazy-load"
+        placeholder={placeholder.minimalChicken}
+        effect="blur"
+        src={images.laurels}
+        alt="laurels"
+      />
     </div>
   </div>
 );

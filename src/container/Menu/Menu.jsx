@@ -4,6 +4,9 @@ import images from "../../constants/images";
 import data from "../../constants/data";
 import SubHeading from "../../components/SubHeading/SubHeading";
 import MenuItem from "../../components/MenuItem/MenuItem";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholder from "../../constants/placeholder";
 
 function Menu() {
   return (
@@ -12,6 +15,7 @@ function Menu() {
         <SubHeading title="menu that fits your palette" />
         <h1 className="headtext__cormorant">today's special</h1>
       </div>
+
       <div className="app__specialMenu-menu">
         <div className="app__specialMenu-menu_wine flex__center">
           <p className="app_specialMenu-menu_heading">wine & beer</p>
@@ -28,7 +32,13 @@ function Menu() {
         </div>
 
         <div className="app__specialMenu-menu_img">
-          <img src={images.menu} alt="menu img" />
+          <LazyLoadImage
+            className="lazy-load"
+            placeholder={placeholder.cocktail}
+            effect="blur"
+            src={images.menu}
+            alt="menu img"
+          />
         </div>
 
         <div className="app__specialMenu-menu_cocktails flex__center">
@@ -45,6 +55,7 @@ function Menu() {
           </div>
         </div>
       </div>
+
       <div style={{ marginTop: "15px" }}>
         <button type="button" className="custom__button">
           view more

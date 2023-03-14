@@ -1,13 +1,22 @@
 import React from "react";
 import images from "../../constants/images";
 import SubHeading from "../../components/SubHeading/SubHeading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholder from "../../constants/placeholder";
 import "./Chef.css";
 
 function Chef() {
   return (
     <div className="app__bg app__wrapper section__padding">
       <div className="app__wrapper_img app__wrapper_img-reverse">
-        <img src={images.chef} alt="chef" />
+        <LazyLoadImage
+          className="lazy-load"
+          placeholder={placeholder.chef05}
+          effect="blur"
+          src={images.chef}
+          alt="chef"
+        />
       </div>
       <div className="app__wrapper_info">
         <SubHeading title="chef's word" />

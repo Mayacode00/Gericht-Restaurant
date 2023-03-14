@@ -1,29 +1,32 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Header from "./container/Header/Header";
-import AboutUs from "./container/AboutUs/AboutUs";
-import Menu from "./container/Menu/Menu";
-import Chef from "./container/Chef/Chef";
-import Intro from "./container/Intro/Intro";
-import Laurels from "./container/Laurels/Laurels";
-import Gallery from "./container/Gallery/Gallery";
-import FindUs from "./container/FindUs/FindUs";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "././pages/Home/Home";
+import About from "././pages/About/About";
+import Services from "././pages/Services/Services";
 import Footer from "./container/Footer/Footer";
+import Chefs from "./pages/Chefs/Chefs";
+import ChefChoi from "./container/ChefsProfiles/ChefsChoi";
 import "./App.css";
+import ChefKev from "./container/ChefsProfiles/ChefKev";
+import Faq from "./pages/Faqs/Faq";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Header />
-      <AboutUs />
-      <Menu />
-      <Chef />
-      <Intro />
-      <Laurels />
-      <Gallery />
-      <FindUs />
-      <Footer />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/chefs" element={<Chefs />} />
+          <Route path="/chefs/chefchoi" element={<ChefChoi />} />
+          <Route path="/chefs/chefkev" element={<ChefKev />} />
+          <Route path="/faq" element={<Faq/>}/>
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }
